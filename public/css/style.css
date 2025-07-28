@@ -1,36 +1,35 @@
-/* Importação de fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:300;400;700&display=swap');
 
 /* --- Resets Básicos e Variáveis CSS (Tema Claro) --- */
 :root {
-    --cor-primaria: #007BFF; /* Azul vibrante */
-    --cor-secundaria: #6C757D; /* Cinza médio */
-    --cor-fundo-site: #F8F9FA; /* Quase branco para o corpo do site */
-    --cor-fundo-secao: #FFFFFF; /* Branco para o background das seções */
-    --cor-texto-principal: #343A40; /* Preto quase escuro */
-    --cor-texto-secundaria: #5a5a5a; /* Cinza para textos secundários */
-    --cor-destaque: #28A745; /* Verde para sucesso ou destaque */
-    --cor-borda: #dee2e6; /* Cinza claro para bordas */
+    --cor-primaria: #007BFF; 
+    --cor-secundaria: #6C757D;
+    --cor-fundo-site: #F8F9FA;
+    --cor-fundo-secao: #FFFFFF; 
+    --cor-texto-principal: #343A40; 
+    --cor-texto-secundaria: #5a5a5a;
+    --cor-destaque: #28A745; 
+    --cor-borda: #dee2e6;
     --sombra-leve: 0 4px 6px rgba(0, 0, 0, 0.1);
     --sombra-media: 0 8px 15px rgba(0, 0, 0, 0.15);
-    --cor-header-bg: var(--cor-primaria); /* Cor da navbar no tema claro */
-    --cor-header-text: #fff; /* Cor do texto da navbar no tema claro */
+    --cor-header-bg: var(--cor-primaria); 
+    --cor-header-text: #fff; 
 }
 
 /* --- Variáveis CSS (Tema Escuro) --- */
 body.dark-theme {
-    --cor-primaria: #8dcefb; /* Azul mais claro para títulos no tema escuro */
-    --cor-secundaria: #ADB5BD; /* Cinza mais claro */
-    --cor-fundo-site: #1A202C; /* Azul escuro quase preto para o corpo */
-    --cor-fundo-secao: #2D3748; /* Cinza escuro para background das seções */
-    --cor-texto-principal: #E2E8F0; /* Branco acinzentado */
-    --cor-texto-secundaria: #CBD5E0; /* Cinza mais claro para textos secundários */
-    --cor-destaque: #6EE7B7; /* Verde mais vibrante para destaque */
-    --cor-borda: #4A5568; /* Cinza escuro para bordas */
+    --cor-primaria: #8dcefb; 
+    --cor-secundaria: #ADB5BD; 
+    --cor-fundo-site: #1A202C; 
+    --cor-fundo-secao: #2D3748; 
+    --cor-texto-principal: #E2E8F0; 
+    --cor-texto-secundaria: #CBD5E0; 
+    --cor-destaque: #6EE7B7; 
+    --cor-borda: #4A5568; 
     --sombra-leve: 0 4px 8px rgba(0, 0, 0, 0.3);
     --sombra-media: 0 10px 20px rgba(0, 0, 0, 0.4);
-    --cor-header-bg: #1A202C; /* Cor da navbar no tema escuro (igual ao fundo do body) */
-    --cor-header-text: #E2E8F0; /* Cor do texto da navbar no tema escuro */
+    --cor-header-bg: #1A202C; 
+    --cor-header-text: #E2E8F0;
 }
 
 
@@ -175,13 +174,13 @@ nav ul li a.active {
     padding-top: 4rem;
     padding-bottom: 4rem;
     text-align: left;
-    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+    flex-wrap: wrap; 
 }
 
 .biografia-content {
-    max-width: 60%; /* Ajuste a largura conforme necessário */
-    flex-grow: 1; /* Permite que o conteúdo cresça */
-    margin-right: 2rem; /* Espaço entre o texto e a imagem */
+    max-width: 60%; 
+    flex-grow: 1; 
+    margin-right: 2rem; 
 }
 
 #biografia h1 {
@@ -222,6 +221,9 @@ nav ul li a.active {
     transform: translateY(-3px);
 }
 
+
+
+
 .profile-pic {
     width: 340px; 
     height: 340px;
@@ -233,7 +235,7 @@ nav ul li a.active {
     flex-shrink: 0; 
 }
 
-/* Animação de zoom ao passar o mouse */
+
 .profile-pic:hover {
     transform: scale(1.5); 
     transition: 2s;
@@ -473,4 +475,54 @@ footer {
     .section-container {
         padding: 2rem 1rem;
     }
+}
+
+.CV-H2.ativo {
+    color: #22d3e0;
+    text-shadow: 0 2px 8px rgba(1, 5, 20, 0.611), 0 0px 2px #fff;
+}
+
+
+
+.linkedin-H2,
+.CV-H2,
+.github-H2 {
+    color: var(--cor-fundo-secao);
+    margin-left: -50px;
+    width: 15px;
+    height: 10px;
+    font-size: 1rem;
+    transition: color 0.5s, text-shadow 0.3s;
+    cursor: pointer;
+}
+
+.linkedin-H2.ativo {
+    color: #0077b5;
+    text-shadow: 0 2px 8px rgba(0,119,181,0.4), 0 0px 2px #fff;
+}
+
+.github-H2.ativo {
+    color: #333;
+    text-shadow: 0 2px 8px rgba(51,51,51,0.4), 0 0px 2px #fff;
+}
+
+.icones-sociais {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.icone-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icone-item img {
+    width: 60px;
+    height: auto;
+    margin: 0;
+    transition: transform 0.2s;
 }

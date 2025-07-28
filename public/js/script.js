@@ -1,7 +1,6 @@
-
-        // JavaScript para o contador de idade
+// JavaScript para o contador de idade
         document.addEventListener('DOMContentLoaded', function() {
-            const dataNascimento = new Date(2004, 9, 23); // Mês é 0-indexado (Setembro é 8)
+            const dataNascimento = new Date(2004, 9, 23); 
             const hoje = new Date();
             let idade = hoje.getFullYear() - dataNascimento.getFullYear();
             const m = hoje.getMonth() - dataNascimento.getMonth();
@@ -42,5 +41,33 @@
                     localStorage.setItem('theme', 'light');
                 }
             });
-        
+        });
+
+        // animação do titulo de icons
+        const cvImg = document.querySelector('.CV');
+        const cvH2 = document.querySelector('.CV-H2');
+
+        cvImg.addEventListener('mouseenter', () => {
+            cvH2.classList.add('ativo');
+        });
+        cvImg.addEventListener('mouseleave', () => {
+            cvH2.classList.remove('ativo');
+        });
+
+        const linkedinImg = document.querySelector('.linkedinLink');
+        const linkedinH2 = document.querySelector('.linkedin-H2');
+        linkedinImg.addEventListener('mouseenter', () => {
+            linkedinH2.classList.add('ativo');
+        });
+        linkedinImg.addEventListener('mouseleave', () => {
+            linkedinH2.classList.remove('ativo');
+        });
+
+        const githubImg = document.querySelector('.GithubLink');
+        const githubH2 = document.querySelector('.github-H2');
+        githubImg.addEventListener('mouseenter', () => {
+            githubH2.classList.add('ativo');
+        });
+        githubImg.addEventListener('mouseleave', () => {
+            githubH2.classList.remove('ativo');
         });
